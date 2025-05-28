@@ -1,5 +1,6 @@
 #sorted array
 #TWO_POINTER Approach
+#gets number of unique elements
 
 nums = [1,1,2,2,3,4,4]
 
