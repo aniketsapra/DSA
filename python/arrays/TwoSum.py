@@ -14,3 +14,26 @@ def hasPairTwoSum(arr, target):
   return "no pair"
   
 print(hasPairTwoSum(arr,9))
+
+
+# Sorting Array 
+# Two_Pointer
+arr = [8, 7, 3, 12, 5]
+
+def hasPairTwoSum(arr, target):
+    arr.sort()
+    left = 0
+    right = len(arr) - 1
+    print(arr)
+
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        if current_sum == target:
+            return (arr[left], arr[right])  # Or (left, right) if you want indices
+        elif current_sum > target:
+            right -= 1
+        else:
+            left += 1
+    return "No Pair Available"
+
+print(hasPairTwoSum(arr, 10))
