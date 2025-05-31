@@ -6,7 +6,7 @@ def binarySearch(arr, target):
     left = 0
     right = len(arr) - 1
     while left <= right:
-        mid = (left + right) // 2 # integer division= //, float division = /
+        mid = (left + right) // 2   # integer division= //, float division = /
         if arr[mid] == target:
             return f"value found at index {mid}"
         elif arr[mid] < target:
