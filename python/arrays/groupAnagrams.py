@@ -15,3 +15,15 @@ def groupAnagrams(words):
     return list(map.values()) #return all values in the map
     
 print(groupAnagrams(words))
+
+
+
+class Solution(object):
+    def groupAnagrams(self, strs):
+        map = {}
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            if sorted_word not in map:
+                map[sorted_word] = []
+            map[sorted_word].append(word)
+        return list(map.values())
