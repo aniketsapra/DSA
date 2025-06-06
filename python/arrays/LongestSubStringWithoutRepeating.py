@@ -20,6 +20,17 @@ def lengthOfLongestSubstringNotRepeating(string):
 print(lengthOfLongestSubstringNotRepeating(string)) # Output: 3
 
 
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        left, maxLen = 0, 0
+        seen = set()
+        for right in range(len(s)):
+            while s[right] in seen:
+                seen.remove(s[left])
+                left += 1
+            seen.add(s[right])
+            maxLen = max(maxLen, right - left + 1)
+        return maxLen
 
 # right = 0 → 'a'
 
